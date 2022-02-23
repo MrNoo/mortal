@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon"
+    type="image/jpg"   href="https://64.media.tumblr.com/3a44986beb22564e1bc3a92e1c0ffa8b/tumblr_peg8q3x7xj1t5hsoq_1280.jpg">
+<title><%= title %></title>
+<link rel="stylesheet" type="text/css" href="https://<%= hostname %>/css/style.css">
+<% if (analitics) { %>
+<%- include('./analytics.ejs') %>
+<% } %>
+<%- include("./seo", { bot, user, path, description, title, url, image:`https://64.media.tumblr.com/3a44986beb22564e1bc3a92e1c0ffa8b/tumblr_peg8q3x7xj1t5hsoq_1280.jpg`}) %>
+</head>
+<body>
+<script type="text/javascript">var preload = document.createElement('div'); preload.className = "preloader"; preload.innerHTML = '</div><div class="spinner"></div>'; document.body.appendChild(preload); window.addEventListener('load', function() { preload.className +=  ' fade'; setTimeout(function(){ preload.style.display = 'none'; },600); 
+})</script>
+<noscript><div class="no-js">To view the page please enable javascript in your browser.</div></noscript>
+<%- include("./menuNav", { bot, user, path, url, image, name, tag }) %>
+<div class="blur" id="body-blur"></div>
+<%- title === "Dashboard" ? "" : "" %>
